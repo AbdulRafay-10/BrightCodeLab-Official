@@ -13,7 +13,7 @@ import JeepSafari from "../../assets/images/JeepSafari.png";
 import Fitness from "../../assets/images/5-best-fitness-apps.jpg";
 import Savo from "../../assets/images/WhatsApp Image 2025-08-16 at 01.56.38 (1).jpeg.jpg";
 import frame2 from "../../assets/images/Frame 2.png";
-import frame4 from "../../assets/images/frame 4.png";
+import frame4 from "../../assets/images/Frame 4.png";
 import Cerbro from "../../assets/images/fitness app dashbored.webp";
 import Herbal from "../../assets/images/Herbal-App.png";
 import Hotal from "../../assets/images/Hotel-Booking-Web.png";
