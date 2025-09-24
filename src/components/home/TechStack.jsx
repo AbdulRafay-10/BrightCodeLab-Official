@@ -20,6 +20,7 @@ import aws from "../../assets/images/aws.png";
 import postgresql from "../../assets/images/postgresql-1.png";
 import mysql from "../../assets/images/mysql.png";
 import mongo from "../../assets/images/mongo.png";
+import { motion, useInView } from "framer-motion";
 
 // ✅ Build your technologies array
 const technologies = [
@@ -44,11 +45,19 @@ const technologies = [
 ];
 
 export default function TechnicalForte() {
+  const headingRef = React.useRef(null);
+  const isInView = useInView(headingRef, { amount: 0.2, once: false });
   return (
     <section className="w-full max-w-full mx-auto  bg-[#fefefe]">
-      <h2 className="text-3xl font-bold text-center text-foreground mb-2 pt-16 pb-4 px-8">
-        Our Tech Stacks
-      </h2>
+      <div className="relative text-4xl -mb-10 mb-6 tracking-wider text-black text-center" ref={headingRef}>
+        <motion.p
+          className="font-bold text-4xl"
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          Our Tech <span className="text-primaryBlue">Stacks</span> 
+        </motion.p>
+      </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12 px-8 pb-16">
         {technologies.map((tech, index) => (
