@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .service-card {
+  background-image: url("./assets/images/Bg-img.webp");
+} */
+
+body {
+  overflow-x: hidden;
+}
+
+.team-Bg {
+  /* background-image: url("./assets/images/.team-Bg"); */
+}
+
+.scroll-card {
+  background-image: url("./assets/images/Bg-img.webp");
+  animation: scroll 10s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.animate-scroll {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: calc(100%);
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+.scroll-logo {
+  animation: scroll 2s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+.css-1m8ohli-MuiButtonBase-root-MuiFab-root-MuiSpeedDialAction-fab {
+  width: 50px !important;
+  height: 50px !important;
+  background-color: #ffffff3d !important;
+}
+
+.react-date-picker__wrapper {
+  display: none !important;
+}
+.react-calendar {
+  box-shadow: 5px 5px 5px 0px #68a2d4;
+  -webkit-box-shadow: 5px 5px 5px 0px #68a2d4;
+  -moz-box-shadow: 5px 5px 5px 0px #68a2d4;
+  border: none !important;
+}
+.react-date-picker__calendar,
+.react-date-picker__calendar--open {
+  position: relative !important;
+  /* top: 50px !important; */
+}
+.react-calendar__tile {
+  border-radius: 50%;
+  margin: 2px !important;
+}
+/* Webkit Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px; /* For horizontal scrollbar */
+  width: 8px; /* For vertical scrollbar (optional) */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #68a2d4; /* Blue color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Light track color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Optional: Handle hover effects for thumb */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #587ccc;
+}
+
+/* button start */
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 8px 20px;
+  border: 2px solid #012842;
+  border-radius: 100px;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  /* Remove default styles */
+  appearance: none;
+
+  /* Better touch handling */
+  touch-action: manipulation;
+
+  /* Create stacking context */
+  isolation: isolate;
+}
+
+/* Blur effect */
+
+/* Remove box-shadow from react-date-picker popper and wrapper */
+.react-date-picker,
+.react-date-picker__wrapper,
+.react-calendar__tile,
+.react-calendar__tile--active,
+.react-calendar {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.react-calendar {
+  border-radius: 16px !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  min-width: 400px !important;
+  max-width: 100% !important;
+  width: 500px !important;
+}
+
+.react-calendar__tile--now {
+  background: #49b7f3 !important;
+  color: #fff !important;
+  border-radius: 12px !important; /* slightly rounded */
+}
+
+.react-calendar__tile--active {
+  border-radius: 12px !important;   /* slightly rounded */
+  width: 30px !important;          /* smaller width */
+  height: 20px !important;         /* smaller height */
+  background: #005baa !important;
+  color: #fff !important;
+}
+
+.react-calendar__tile {
+  border-radius: 4px !important;   /* slight rounding for all */
+  width: 40px !important;
+  height: 34px !important;
+  margin: 2px !important;
+}
+
+/* Focus styles */
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Hover styles */
+@media (hover: hover) {
+  .button:hover::before {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.button--active {
+  background: rgba(255, 255, 255, 0.2); /* Slightly filled background */
+  border-color: rgba(66, 61, 61, 0.5); /* Highlighted border */
+  color: #000; /* Change text color */
+  font-weight: bold; /* Emphasize active button text */
+  transform: scale(1.05); /* Slightly enlarge */
+}
+/* Disabled state */
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Button text container */
+.button__text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Icon styles */
+.button__icon {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .button::before {
+    transition: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.slick-slider {
+  @apply relative block;
+}
+
+.slick-list {
+  @apply block overflow-hidden m-0 p-0;
+}
+
+.slick-track {
+  @apply flex; /* makes children go in a row */
+}
+
+.slick-slide {
+  @apply h-auto; /* keeps height natural */
+}
+
+.slick-slide > div {
+  @apply h-full; /* ensures card takes full height */
+}
+
+/* Dots */
+
+
+/* button end */
