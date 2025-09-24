@@ -17,7 +17,7 @@ const Home = () => {
       <HomeImg />
       <OurServicesText />
       <OurServices />
-      <CEOmessage />
+      {/* <CEOmessage /> */}
       <TechStack />
       <DevelopmentProcess />
       <CaseStudies />
